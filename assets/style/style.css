@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body, html {
+*, body, html {
     margin: 0px;
     padding: 0px;
     outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
 }
 
 p {
@@ -116,25 +118,24 @@ div#seperator__line {
 /* Employees */
 
 div#title {
-    background: #470063;
+    background: transparent;
     border-top-left-radius: 70px;
     height: 20%;
     font-size: 2.4em;
     font-weight: 700;
-    color: #ECF0F1;
+    color: #1e1e1e;
 
     line-height: 109%;
 
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 4px 28px 2px rgba(0, 0, 0, 0.45);
 }
 
 .title-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 7%;
+    padding-left: 3%;
 }
 
 #time {
@@ -145,7 +146,7 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 table, th, td {
@@ -157,6 +158,7 @@ th {
     border-bottom: 1px solid #B1B4B5;
     height: 2em;
     padding-bottom: 0.6em;
+    color:#1e1e1e
 }
 
 tr#two td {
