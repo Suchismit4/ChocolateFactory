@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-one card">
+        <div class="title-login">Login.</div>
+        <form action="routes/bibu" method="get">
+            <input placeholder="Enter your CEC" type="text" name="" id="" class="cec">
+            <button type="submit" class="button-next">Next</button>
+        </form>
+    </div>
+
+    <div class="card-caption card">
+        <div>
+            Keeping things simple,<br>
+            so you can <span id='focus' style="color:#470063;
+            ">focus</span> on what matters
+        </div>
+    </div>
+
+    <div class="card-transparent">
+        One employee portal. <br>
+        One login code.
+    </div>
+
+    <div class="card-logo card"><img src="assets/img/logo.png" alt="ChocolateFactory"></div>
+</body>
+
+<script>
+    let a = document.querySelector('.button-next');
+    let focus = document.querySelector('#focus');
+    let title = document.querySelector('.title-login');
+    let body = document.querySelector('body');
+    a.addEventListener('mouseover', () => {
+        focus.style.color = '#FF4343';
+        title.style.color = '#FF4343';
+        body.style.background = '#470063';
+    })
+    a.addEventListener('mouseout', () => {
+        focus.style.color = '#470063';
+        title.style.color = '#470063';
+        body.style.background = '#FF4343';
+    })
+</script>
+
+</html>

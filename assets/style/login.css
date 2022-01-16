@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #FF4343;
+    transition: 0.3s;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 61px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 46px;
+
+    position:fixed;
+    width: 300px;
+    height:300px;
+}
+
+.card-one{
+    bottom: 0;
+    right: 0;
+
+    width: 40%;
+    height: 70%;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-caption {
+    bottom: 0;
+    left: 5%;
+
+    width: 45%;
+    height: 20%;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    font-weight: 700;
+    font-size: 1.5em;
+    /* text-align: center; */
+    /* padding-top: 1em; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-logo {
+    top: 0;
+    left: 5%;
+
+    height: 60%;
+    width: 45%;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+img {
+    position: absolute;
+    bottom: 13%;
+    left: 50%; 
+    transform: translateX(-55%);
+    width:80%;
+
+}
+
+.card-transparent {
+    position: fixed;
+    left: 5%;
+    bottom: 20%;
+
+    height: 20%;
+    width:45%;
+
+    font-weight: 600;
+    font-size: 1.5em;
+    color: white;
+    padding-left: 2em; 
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.title-login {
+    color: #470063;
+    font-weight: 700;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+
+form {
+    height: 30%;
+    /* background-color: green; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.cec, .button-next {
+    width: 100%;
+    border-radius: 46px;
+    outline: none;
+    border: none;
+    height: 3em;
+}
+
+.cec {
+    background: #ECF0F1;
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center;
+}
+
+.button-next {
+    background: #470063;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    color:white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-next:hover {
+    background-color: #FF4343;
+}
+
+::placeholder {
+    color: #7F8282;
+}
+
+#focus {
+    transition: 0.3s;
+}
