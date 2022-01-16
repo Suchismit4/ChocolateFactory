@@ -1,10 +1,15 @@
-body, html{
+body, html {
     margin: 0px;
     padding: 0px;
     outline: none;
 }
 
-div#app{
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+div#app {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -13,14 +18,37 @@ div#app{
     background-color: #fff;
 }
 
-div#navigation{
+div#navigation {
     width: 14%;
     height: 100vh;
 }
 
-div#panel__space{
+div#panel__space {
     background: #ECF0F1;
     width: 84.5%;
     height: 95%;
     border-radius: 30px;
+}
+
+div.logo {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+div.logo img {
+    width: 135px;
+}
+
+div.navTitle p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    margin-top: 50px;
+    margin-left: 30px;
+    color: rgba(54, 64, 75, 0.6);
+
 }
