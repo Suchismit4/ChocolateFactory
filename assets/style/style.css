@@ -1,0 +1,26 @@
+body, html{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+div#app{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+}
+
+div#navigation{
+    width: 14%;
+    height: 100vh;
+}
+
+div#panel__space{
+    background: #ECF0F1;
+    width: 84.5%;
+    height: 95%;
+    border-radius: 30px;
+}
