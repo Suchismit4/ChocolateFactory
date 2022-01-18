@@ -34,6 +34,8 @@ div#panel__space {
     height: 95%;
     border-radius: 20px;
     padding: 35px 40px;
+    overflow-y: auto;
+    box-shadow: inset 0px -64px 100px -73px rgba(0, 0, 0, 0.25), inset 0px 64px 100px -73px rgba(0, 0, 0, 0.25);
 }
 
 div.logo {
@@ -123,7 +125,7 @@ div#title {
     background: transparent;
     border-top-left-radius: 70px;
     height: 20%;
-    font-size: 2.4em;
+    font-size: 2.2em;
     font-weight: 700;
     color: #1e1e1e;
 
@@ -168,12 +170,9 @@ tr#two td {
 }
 
 td {
-    padding-top: 0.3em;
+    padding-top: 1em;
 }
 
-tr:hover {
-    background-color: #8080801f;
-}
 
 tr#one:hover {
     background-color: transparent;
@@ -183,7 +182,7 @@ a.button-view {
     background-color: #470063;
     color: #ECF0F1;
     text-decoration: none;
-    padding: 0.4em 1.1em;
+    padding: 0.6em 1.7em;
     border-radius: 30px;
     font-size: 0.8em;
     transition: all 0.2s;
