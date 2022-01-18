@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 
 //AUTHENTICATION SHIT
 app.post('/auth', bodyParser.urlencoded() ,(req,res,next)=> {
-if(req.body.CEC=='bitch') {
+if(req.body.CEC=='admin') {
   res.locals.CEC = req.body.CEC;
   next();
 } else {res.redirect('/');}
@@ -80,6 +80,11 @@ app.get('/inventory', async (req, res) => {
   obj = JSON.parse(data);
   res.render('inventory.ejs', {e: obj.inventory});
 });
+
+app.get('/payments', async (req, res) => {
+  if (!req.session.loggedIn){res.redirect('/');return;}
+  res.render('payments.ejs');
+})
 
 server.listen(80);
 console.log("Server now running on http://localhost");
