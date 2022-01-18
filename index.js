@@ -15,6 +15,7 @@ const server = require("http").Server(app);
 */
 const bodyParser = require("body-parser");
 var session = require('express-session');
+const logger = require('morgan');
 const fs = require('fs');
 const path = require('path');
 
@@ -26,6 +27,7 @@ const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
 
 app.set("view engine", "ejs");
+app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(session({secret:'tore-maa-gay69.420'
@@ -56,7 +58,6 @@ if(req.body.CEC=='bitch') {
 },(req,res)=> {
   req.session.loggedIn = true;
   req.session.CEC = res.locals.CEC;
-  console.log(req.session);
   res.redirect('/supply_chain');
 });
 
