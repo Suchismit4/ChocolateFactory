@@ -1,0 +1,147 @@
+.pay-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    column-gap: 2vw;
+    row-gap: 2vw;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    margin-top: 6vh;
+}
+
+.pay-card {
+    width: 47%;
+    height: 60vh;
+    background-color: white;
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pay-main {
+    width: 90%;
+    height: 90%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-header {
+    height: 40%;
+    width: 100%;
+    border-bottom: 1px solid #E1E2E4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-top {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     padding-right: 1em;   
+}
+
+.logo-container {
+    height: 100%;
+    padding: 0.4em;
+    padding-left: 0;
+}
+
+.amount-due {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.img-logo {
+    height: 100%;
+}
+
+.header-bottom {
+    width: 100%;
+    height: 50%;
+    font-size: 0.7em;
+    color: #687078;
+    margin-top: 0.5em;
+  
+}
+
+.pay-body {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fourcolumn, .desc, .pay-button {
+    /* border: 1px solid black; */
+} 
+.fourcolumn {
+    width: 100%;
+    height: 40%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+.desc {
+    width: 100%;
+    height: 40%;
+    padding-top: 0.45em;
+    overflow: hidden;
+    
+}
+.pay-button {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.pay-btn {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+.colum {
+    /* width: 100%; */
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: column nowrap;
+    /* text-align: center; */
+}
+
+.colum-title {
+    width: 100%;
+    /* height: 35%; */
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #687078;
+}
+
+.colum-data {
+    width: 100%;
+    /* height: 65%; */
+    font-weight: 600;
+    color: #36404B;
+}
+
+.desc-colum {
+    text-overflow: ellipsis;
+    font-weight: 500;
+    max-height: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9em;
+    padding-bottom: 0.7em;
+}

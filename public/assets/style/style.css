@@ -178,7 +178,7 @@ tr#one:hover {
     background-color: transparent;
 }
 
-a.button-view {
+.button-view {
     background-color: #470063;
     color: #ECF0F1;
     text-decoration: none;
@@ -186,9 +186,10 @@ a.button-view {
     border-radius: 30px;
     font-size: 0.8em;
     transition: all 0.2s;
+    cursor: pointer;
 }
 
-a.button-view:hover {
+.button-view:hover {
     background-color: #FF4343;
 }
 
