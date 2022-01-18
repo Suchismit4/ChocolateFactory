@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1920, initial-scale=1.0">
     <title>ChocolateFactory</title>
-    <link rel="stylesheet" href="./assets/style/inventory.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
     <div id="app">
@@ -111,12 +111,9 @@
             </div>
         </div>
         <div id="panel__space">
-            <div id="title">
-                <div class="title-left">
-                    Inventory.
-                    <span id='time'>May, 2022</span>
-                </div>
-                <div class="title-right"></div>
+            <div id="panel__title">
+                <h1>Inventory</h1>
+                <p>As of January, 2022</p>
             </div>
             <table width="95%">
                 <tr id="one">
@@ -125,7 +122,7 @@
                     <th style="margin-right: 30%;">Next Shipment</th>
                     <th style="font-weight:400">Due Date</th>
                     <th style="font-weight:400">Amount</th>
-                    <th>Actions</th>
+                    <th style="width: 0px;">Actions</th>
                 </tr>
                 <% for(var i = 0; i < e.length; i++){ %>
                 <tr>
