@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
   res.render('login.ejs')
 })
 
-app.get('/supply_chain', async (req, res) => {
+app.get('/sc', async (req, res) => {
   const data = await readFile('./db/inventory.json', 'utf-8');
   obj = JSON.parse(data);
   res.render('supply_chain.ejs', {e: obj.inventory})
