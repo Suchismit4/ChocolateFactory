@@ -49,11 +49,5 @@ app.get('/employees', async (req, res) => {
   res.render('employees.ejs', {e: obj.employees})
 })
 
-// const FetchEmployeeList = async () => {
-//   const data = await readFile('./db/employees.json', 'utf-8');
-//   obj = JSON.parse(data);
-//   return obj.employees;
-// }
-
 server.listen(80)
 console.log("Server now running on http://localhost")
