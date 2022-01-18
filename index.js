@@ -34,10 +34,9 @@ app.use(express.urlencoded({
 }))
 app.use(express.json());
 
-/**
- * <<------- SOURCE ------->> 
- * 
- */
+
+// ------- SOURCE -------
+
 
 app.get('/', (req, res) => {
   res.render('index.ejs')
