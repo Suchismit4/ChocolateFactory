@@ -25,11 +25,9 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
-const {
-  promisify
-} = require('util')
-const writeFile = promisify(fs.writeFile)
-const readFile = promisify(fs.readFile)
+const {promisify} = require('util');
+const writeFile = promisify(fs.writeFile);
+const readFile = promisify(fs.readFile);
 app.use(express.static("public"));
 app.use(express.urlencoded({
   extended: false
