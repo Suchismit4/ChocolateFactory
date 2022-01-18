@@ -33,6 +33,7 @@ div#panel__space {
     width: 84.5%;
     height: 95%;
     border-radius: 20px;
+    padding: 35px 40px;
 }
 
 div.logo {
@@ -108,11 +109,11 @@ div#seperator__line {
     margin-top: 15px;
 }
 
-.navItem.active p{
+.navItem.active p {
     color: #36404B;
 }
 
-.navItem p{
+.navItem p {
     color: rgba(54, 64, 75, 0.75);
 }
 
@@ -159,7 +160,7 @@ th {
     border-bottom: 1px solid #B1B4B5;
     height: 2em;
     padding-bottom: 0.6em;
-    color:#1e1e1e
+    color: #1e1e1e
 }
 
 tr#two td {
@@ -193,3 +194,89 @@ a.button-view:hover {
 }
 
 /* Employees End */
+
+/* Supply Chain Start */
+
+div#panel__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+div#panel__title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-right: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+div#panel__title p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: rgba(54, 64, 75, 0.75);
+}
+
+.block {
+    position: absolute;
+    background: #C4C4C4;
+    min-width: 260px;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+#mainCanvas {
+    height: 88%;
+    margin-top: 30px;
+    /* background-color: rgba(54, 64, 75, 0.1); */
+    width: 100%;
+}
+
+.block p.title__ {
+    margin: 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.005em;
+
+    color: #000000;
+}
+
+p.ownerBy {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    color: rgba(54, 64, 75, 0.75);
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+p.info {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+    letter-spacing: 0.005em;
+    color:rgba(54, 64, 75, 0.75);
+    margin-bottom: 3px;
+}
+
+p.info span{
+    font-weight: 600;
+    color: #000000;
+}
+
+#my_factory{
+    min-width: fit-content;
+}
+
+#my_factory img{
+    width: 120px;
+}
