@@ -224,6 +224,13 @@ div#panel__title p {
     margin-top: 30px;
     /* background-color: rgba(54, 64, 75, 0.1); */
     width: 100%;
+    overflow: hidden !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#mainCanvas_innerDiv{
+    overflow: hidden !important;
 }
 
 .block p.title__ {

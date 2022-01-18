@@ -125,7 +125,7 @@
                 <p>View all information about the company’s supply chain. </p>
             </div>
             <div class="canvas" id="mainCanvas">
-                <div class="block draggable" id="sugarcane_farm" style="left: 50px; top: 75px;">
+                <div class="block draggable" id="sugarcane_farm" style="z-index: 2; position: absolute; left: 1px; top: 1px;">
                     <p class="title__">Sugar Cane Factory</p>
                     <p class="ownerBy">SugarDaddy Pvt Ltd.</p>
                     <p class="info">
@@ -138,7 +138,7 @@
                         <span>Quota Remaining:</span> 200 tonnes/m
                     </p>
                 </div>
-                <div class="block draggable" id="sugar_processing" style="left: 469px; top: 239px;">
+                <div class="block draggable" id="sugar_processing" style="z-index: 2; position: absolute; left: 425px; top: 1px;">
                     <p class="title__">Sugar Processing Factory</p>
                     <p class="ownerBy">SugarDaddy Pvt Ltd.</p>
                     <p class="info">
@@ -151,9 +151,66 @@
                         <span>Quota Remaining:</span> 200 tonnes/m
                     </p>
                 </div>
-                <div class="block draggable" id="my_factory" style="left: 955px; top: 185px;">
+                <div class="block draggable" id="my_factory" style="z-index: 2; position: absolute; left: 991px; top: 274px;">
                     <img src="./assets/img/logo.png" alt="">
                 </div>
+                <div class="block draggable" id="cocao_powder" style="z-index: 2; position: absolute; left: 1px; top: 192px;">
+                    <p class="title__">Cocoa Power</p>
+                    <p class="ownerBy">SugarMommy Pvt Ltd.</p>
+                    <p class="info">
+                        <span>Next Delivery of shipment:</span> 21-01-2069
+                    </p>
+                    <p class="info">
+                        <span>Units Supplied:</span> 150 tonnes
+                    </p>
+                    <p class="info">
+                        <span>Quota Remaining:</span> 200 tonnes/m
+                    </p>
+                </div>
+                <div class="block draggable" id="dairy_farm" style="z-index: 2; position: absolute; left: 1px; top: 407px;">
+                    <p class="title__">Dairy Farm</p>
+                    <p class="ownerBy">MooMooCow Pvt Ltd.</p>
+                    <p class="info">
+                        <span>Next Delivery of shipment:</span> 21-01-2069
+                    </p>
+                    <p class="info">
+                        <span>Units Supplied:</span> 100 tonnes
+                    </p>
+                    <p class="info">
+                        <span>Quota Remaining:</span> 200 tonnes/m
+                    </p>
+                </div>
+                <div class="block draggable" id="milK_processing" style="z-index: 2; position: absolute; left: 474px; top: 407px;">
+                    <p class="title__">Dairy Processing Factory</p>
+                    <p class="ownerBy">MooMooCow Pvt Ltd.</p>
+                    <p class="info">
+                        <span>Next Delivery of shipment:</span> 21-01-2069
+                    </p>
+                    <p class="info">
+                        <span>Units Supplied:</span> 100 tonnes
+                    </p>
+                    <p class="info">
+                        <span>Quota Remaining:</span> 200 tonnes/m
+                    </p>
+                </div>
+                <div class="block draggable" id="vallina_processing" style="z-index: 2; position: absolute; left: 927px; top: 1px;">
+                    <p class="title__">Vanilla Processing Factory</p>
+                    <p class="ownerBy">Vanity Pvt Ltd.</p>
+                    <p class="info">
+                        <span>Next Delivery of shipment:</span> 21-01-2069
+                    </p>
+                    <p class="info">
+                        <span>Units Supplied:</span> 60 tonnes
+                    </p>
+                    <p class="info">
+                        <span>Quota Remaining:</span> 100 tonnes/m
+                    </p>
+                </div>
+                <div class="connector dairy_farm milK_processing "></div>
+                <div class="connector milK_processing my_factory"></div>
+                <div class="connector vallina_processing my_factory"></div>
+
+                <div class="connector cocao_powder my_factory "></div>
                 <div class="connector sugarcane_farm sugar_processing"></div>
                 <div class="connector sugar_processing my_factory"></div>
 
