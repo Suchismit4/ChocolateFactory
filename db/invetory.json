@@ -1,0 +1,39 @@
+{
+    "inventory": [
+        {
+            "material": "Sugar",
+            "remaining_stock": 50,
+            "next_shipment": "Dispatched",
+            "due_date": "21/01/2022",
+            "amount": 30
+        },
+        {
+            "material": "Cocoa",
+            "remaining_stock": 50,
+            "next_shipment": "Dispatched",
+            "due_date": "21/01/2022",
+            "amount": 30
+        },
+        {
+            "material": "Vanilla Extract",
+            "remaining_stock": 50,
+            "next_shipment": "Dispatched",
+            "due_date": "21/01/2022",
+            "amount": 30
+        },
+        {
+            "material": "Jelly",
+            "remaining_stock": 50,
+            "next_shipment": "Dispatched",
+            "due_date": "21/01/2022",
+            "amount": 30
+        },
+        {
+            "material": "Milk",
+            "remaining_stock": 50,
+            "next_shipment": "Dispatched",
+            "due_date": "21/01/2022",
+            "amount": 30
+        }
+    ]
+}
