@@ -127,65 +127,16 @@
                     <th style="font-weight:400">Amount</th>
                     <th>Actions</th>
                 </tr>
-                <tr id="two">
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
+                <% for(var i = 0; i < e.length; i++){ %>
                 <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
+                    <td><%= e[i].material %></td>
+                    <td><%= e[i].remaining_stock %></td>
+                    <td><%= e[i].next_shipment %></td>
+                    <td><%= e[i].due_date %></td>
+                    <td><%= e[i].amount %></td>
                     <td><a href="/" class="button-view">View</a></td>
                 </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-
-                
-                
+                <% } %>
             </table> 
         </div>
     </div>
