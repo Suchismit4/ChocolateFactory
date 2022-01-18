@@ -1,0 +1,60 @@
+{
+    "employees": [
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        },
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        },
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        },
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        },
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        },
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        },
+        {
+            "first_name": "Oopma",
+            "last_name": "Loompa",
+            "attendance": 69.42,
+            "onLeave": "Yes",
+            "onBonus": "Yes",
+            "onPayment": "No"
+        }
+    ]
+}

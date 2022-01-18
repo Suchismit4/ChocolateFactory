@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1920, initial-scale=1.0">
     <title>ChocolateFactory</title>
-    <link rel="stylesheet" href="./assets/style/inventory.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
     <div id="app">
@@ -111,81 +111,29 @@
             </div>
         </div>
         <div id="panel__space">
-            <div id="title">
-                <div class="title-left">
-                    Inventory.
-                    <span id='time'>May, 2022</span>
-                </div>
-                <div class="title-right"></div>
+            <div id="panel__title">
+                <h1>Inventory</h1>
+                <p>As of January, 2022</p>
             </div>
             <table width="95%">
                 <tr id="one">
                     <th>Material</th>
                     <th>Remaining Stock</th>
                     <th style="margin-right: 30%;">Next Shipment</th>
-                    <th style="font-weight:400">Due Date</th>
-                    <th style="font-weight:400">Amount</th>
-                    <th>Actions</th>
+                    <th>Due Date</th>
+                    <th>Amount</th>
+                    <th style="width: 0px;">Actions</th>
                 </tr>
-                <tr id="two">
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
+                <% for(var i = 0; i < e.length; i++){ %>
                 <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
+                    <td><%= e[i].material %></td>
+                    <td><%= e[i].remaining_stock %></td>
+                    <td><%= e[i].next_shipment %></td>
+                    <td><%= e[i].due_date %></td>
+                    <td><%= e[i].amount %></td>
                     <td><a href="/" class="button-view">View</a></td>
                 </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-                <tr>
-                    <td>Sugar</td>
-                    <td>50 tonnes</td>
-                    <td>Dispatched</td>
-                    <td>12/01/2021</td>
-                    <td>30 tonnes</td>
-                    <td><a href="/" class="button-view">View</a></td>
-                </tr>
-
-                
-                
+                <% } %>
             </table> 
         </div>
     </div>

@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config()
+  require('dotenv').config()
 }
 
 /*
@@ -22,24 +22,43 @@ const path = require('path');
 */
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
-    extended: false
+  extended: false
 }));
 app.use(bodyParser.json());
+const {promisify} = require('util');
+const writeFile = promisify(fs.writeFile);
+const readFile = promisify(fs.readFile);
 app.use(express.static("public"));
 app.use(express.urlencoded({
-    extended: false
+  extended: false
 }))
 app.use(express.json());
 
-/**
- * <<------- SOURCE ------->> 
- * 
- */
+
+// ------- SOURCE -------
+
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+  res.render('login.ejs')
 })
 
+app.get('/sc', async (req, res) => {
+  const data = await readFile('./db/inventory.json', 'utf-8');
+  obj = JSON.parse(data);
+  res.render('supply_chain.ejs', {e: obj.inventory})
+})
+
+app.get('/employees', async (req, res) => {
+  const data = await readFile('./db/employees.json', 'utf-8');
+  obj = JSON.parse(data);
+  res.render('employees.ejs', {e: obj.employees})
+})
+
+app.get('/inventory', async (req, res) => {
+  const data = await readFile('./db/inventory.json', 'utf-8');
+  obj = JSON.parse(data);
+  res.render('inventory.ejs', {e: obj.inventory})
+})
 
 server.listen(80)
 console.log("Server now running on http://localhost")
