@@ -183,10 +183,13 @@ tr#one:hover {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.02rem;
+    transition: 0.2s;
 }
 
 .button-view:hover {
     background-color: #FF4343;
+    color:#ECF0F1;
+    cursor: pointer;
 }
 /* Employees End */
 

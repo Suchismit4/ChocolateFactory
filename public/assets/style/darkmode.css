@@ -1,0 +1,12 @@
+.darkmode-layer, .darkmode-toggle {
+    z-index: 500;
+  }
+
+.darkmode--activated .button-view {
+    background-color: #130f0e;
+    /* background-color: #FF4343; */
+}
+.darkmode--activated .button-view:hover {
+    background-color: #00bcbc;
+    color: #130f0e;
+}

@@ -8,6 +8,7 @@
     <title>ChocolateFactory</title>
     <link rel="stylesheet" href="./assets/style/js-graph-it.css">
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="./assets/style/darkmode.css">
 </head>
 
 <body onload="initPageObjects();">
@@ -91,7 +92,7 @@
                 <p style="margin-top: 30px;">USER OPTIONS</p>
             </div>
             <div class="navItems">
-                <div class="navItem">
+                <div class="navItem" onclick="darkwoohoo()">
                     <div class="left">
                         <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -219,5 +220,12 @@
     </div>
 </body>
 <script src="./assets/js-graph-it.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+    const darkmode =  new Darkmode();
 
+    function darkwoohoo() {
+        darkmode.toggle();
+    }
+</script>
 </html>
