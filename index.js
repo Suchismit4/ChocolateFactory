@@ -14,24 +14,25 @@ const server = require("http").Server(app);
   ---- Misc. dependency imports followed -----
 */
 const bodyParser = require("body-parser");
+var session = require('express-session');
 const fs = require('fs');
 const path = require('path');
 
 /*
   ---- APP USAGE ----
 */
-app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-app.use(bodyParser.json());
 const {promisify} = require('util');
 const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
+
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(session({secret:'tore-maa-gay69.420'
+,name:'chocolateID'
+,saveUninitialized:false}));
 app.use(express.static("public"));
-app.use(express.urlencoded({
-  extended: false
-}))
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
@@ -39,26 +40,46 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-  res.render('login.ejs')
-})
+  if(req.session.loggedIn){
+  res.redirect('/supply_chain')
+  } else {
+  res.render('login.ejs');
+  }
+});
 
-app.get('/sc', async (req, res) => {
+//AUTHENTICATION SHIT
+app.post('/auth', bodyParser.urlencoded() ,(req,res,next)=> {
+if(req.body.CEC=='bitch') {
+  res.locals.CEC = req.body.CEC;
+  next();
+} else {res.redirect('/');}
+},(req,res)=> {
+  req.session.loggedIn = true;
+  req.session.CEC = res.locals.CEC;
+  console.log(req.session);
+  res.redirect('/supply_chain');
+});
+
+app.get('/supply_chain', async (req, res) => {
+  if (!req.session.loggedIn){res.redirect('/');return;}
   const data = await readFile('./db/inventory.json', 'utf-8');
   obj = JSON.parse(data);
-  res.render('supply_chain.ejs', {e: obj.inventory})
-})
+  res.render('supply_chain.ejs', {e: obj.inventory});
+});
 
 app.get('/employees', async (req, res) => {
+  if (!req.session.loggedIn){res.redirect('/');return;}
   const data = await readFile('./db/employees.json', 'utf-8');
   obj = JSON.parse(data);
-  res.render('employees.ejs', {e: obj.employees})
-})
+  res.render('employees.ejs', {e: obj.employees});
+});
 
 app.get('/inventory', async (req, res) => {
+  if (!req.session.loggedIn){res.redirect('/');return;}
   const data = await readFile('./db/inventory.json', 'utf-8');
   obj = JSON.parse(data);
-  res.render('inventory.ejs', {e: obj.inventory})
-})
+  res.render('inventory.ejs', {e: obj.inventory});
+});
 
-server.listen(80)
-console.log("Server now running on http://localhost")
+server.listen(80);
+console.log("Server now running on http://localhost");
