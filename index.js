@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config()
+  require('dotenv').config()
 }
 
 /*
@@ -22,12 +22,17 @@ const path = require('path');
 */
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({
-    extended: false
+  extended: false
 }));
 app.use(bodyParser.json());
+const {
+  promisify
+} = require('util')
+const writeFile = promisify(fs.writeFile)
+const readFile = promisify(fs.readFile)
 app.use(express.static("public"));
 app.use(express.urlencoded({
-    extended: false
+  extended: false
 }))
 app.use(express.json());
 
@@ -37,9 +42,20 @@ app.use(express.json());
  */
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+  res.render('index.ejs')
 })
 
+
+app.get('/employees', async (req, res) => {
+  const emp = await FetchEmployeeList();
+  res.render('employees.ejs', {e: emp})
+})
+
+const FetchEmployeeList = async () => {
+  const data = await readFile('./db/employees.json', 'utf-8');
+  obj = JSON.parse(data);
+  return obj.employees;
+}
 
 server.listen(80)
 console.log("Server now running on http://localhost")

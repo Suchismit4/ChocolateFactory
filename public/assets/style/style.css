@@ -35,7 +35,7 @@ div#panel__space {
     border-radius: 20px;
     padding: 35px 40px;
     overflow-y: auto;
-    box-shadow: inset 0px -64px 100px -73px rgba(0, 0, 0, 0.25), inset 0px 64px 100px -73px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0px -64px 100px -73px rgba(0, 0, 0, 0.15), inset 0px 64px 100px -73px rgba(0, 0, 0, 0.15);
 }
 
 div.logo {
@@ -150,19 +150,15 @@ table {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1%;
-}
-
-table, th, td {
-    text-align: center;
-    vertical-align: middle;
+    margin-top: 35px;
 }
 
 th {
     border-bottom: 1px solid #B1B4B5;
     height: 2em;
     padding-bottom: 0.6em;
-    color: #1e1e1e
+    color: #1e1e1e;
+    text-align: left;
 }
 
 tr#two td {
@@ -183,14 +179,12 @@ a.button-view {
     color: #ECF0F1;
     text-decoration: none;
     padding: 0.6em 1.7em;
-    border-radius: 30px;
-    font-size: 0.8em;
-    transition: all 0.2s;
+    border-radius: 300px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
 }
 
-a.button-view:hover {
-    background-color: #FF4343;
-}
 
 /* Employees End */
 
