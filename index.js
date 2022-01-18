@@ -39,9 +39,14 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-  res.render('index.ejs')
+  res.render('login.ejs')
 })
 
+app.get('/supply_chain', async (req, res) => {
+  const data = await readFile('./db/inventory.json', 'utf-8');
+  obj = JSON.parse(data);
+  res.render('supply_chin.ejs', {e: obj.inventory})
+})
 
 app.get('/employees', async (req, res) => {
   const data = await readFile('./db/employees.json', 'utf-8');
