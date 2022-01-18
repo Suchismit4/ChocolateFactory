@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
   }
 });
 
-//AUTHENTICATION SHIT
+//AUTHENTICATION
 app.post('/auth', bodyParser.urlencoded() ,(req,res,next)=> {
 if(req.body.CEC=='admin') {
   res.locals.CEC = req.body.CEC;
