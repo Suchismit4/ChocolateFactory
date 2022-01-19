@@ -1,7 +1,3 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
 /*
   ---- EXPRESS ----
   We are using Express framework for running our 
@@ -10,6 +6,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
+const PORT = 80;
 /*
   ---- Misc. dependency imports followed -----
 */
@@ -23,7 +20,6 @@ const path = require('path');
   ---- APP USAGE ----
 */
 const {promisify} = require('util');
-const writeFile = promisify(fs.writeFile);
 const readFile = promisify(fs.readFile);
 
 app.set("view engine", "ejs");
@@ -32,7 +28,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(session({secret:'tore-maa-gay69.420'
 ,name:'chocolateID'
-,saveUninitialized:false}));
+,saveUninitialized:false,
+ cookie: { maxAge: 600000 }}));
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -61,6 +58,15 @@ if(req.body.CEC=='admin') {
   res.redirect('/supply_chain');
 });
 
+app.get('/logout', bodyParser.urlencoded() ,(req,res,next)=> {
+if(req.session.loggedIn) {
+  req.session.destroy();
+  next();
+} else {res.redirect('/');}
+},(req,res)=> {
+  res.redirect('/');
+});
+
 app.get('/supply_chain', async (req, res) => {
   if (!req.session.loggedIn){res.redirect('/');return;}
   const data = await readFile('./db/inventory.json', 'utf-8');
@@ -87,5 +93,5 @@ app.get('/payments', async (req, res) => {
   res.render('payments.ejs');
 })
 
-server.listen(80);
-console.log("Server now running on http://localhost");
+server.listen(PORT);
+console.log("Server now running on port "+PORT);
