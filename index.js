@@ -58,6 +58,7 @@ if(req.body.CEC=='admin') {
   res.redirect('/supply_chain');
 });
 
+//LOGOUT
 app.get('/logout', bodyParser.urlencoded() ,(req,res,next)=> {
 if(req.session.loggedIn) {
   req.session.destroy();
